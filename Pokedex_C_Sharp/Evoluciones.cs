@@ -27,20 +27,27 @@ namespace Pokedex_C_Sharp
 
 
         }
+        public void cambiaMovimientosPokemon(String movimiento)
+        {
+            movimiento1Pokemon.Text = movimiento;
+        }
+        public void cambiaMovimientosPokemon1(String movimiento1)
+        {
+            movimiento2Pokemon.Text = movimiento1;
+        }
+        public void cambiaHabitat(String habitat)
+        {
+            habitatPokemon.Text = habitat;
+        }
         private void Ventana02_Load (object sender, EventArgs e)
         {
            
-            String posEvolucion = misPokemons.Rows[idActual]["posEvolucion"].ToString();
-            misPokemons = miConexion.getPokemonsPorId(idActual);
-            if(posEvolucion != null)
-            {
-                evolucionPokemons.Text = "Nombre " + "\n" + "\n" + misPokemons.Rows[idActual + 1]["nombre"].ToString();
-            }
-            else
-            {
-                label1.Text = "No hay evoluciones para este pokemon.";
-            }
+           
             
+        }
+       
+        private void label1_Click(object sender, EventArgs e)
+        {
         }
     }
 }

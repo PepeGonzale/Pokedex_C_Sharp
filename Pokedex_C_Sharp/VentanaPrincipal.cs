@@ -19,7 +19,7 @@ namespace Pokedex_C_Sharp
         public VentanaPrincipal()
         {
             InitializeComponent();
-
+           
         }
         private Image convierteBlobAImagen(byte[] img)
         {
@@ -29,7 +29,7 @@ namespace Pokedex_C_Sharp
         private void button1_Click(object sender, EventArgs e)
         {
             idActual--;
-            if (idActual <= 0)
+            if(idActual <= 0)
             {
                 idActual = 1;
             }
@@ -39,7 +39,7 @@ namespace Pokedex_C_Sharp
             alturaPokemon.Text = "Altura" + "\n" + "\n" + misPokemons.Rows[0]["altura"].ToString();
             pesoPokemon.Text = "Peso" + "\n" + "\n" + misPokemons.Rows[0]["peso"].ToString();
             habilidadPokemon.Text = "Habitat" + "\n" + "\n" + misPokemons.Rows[0]["habilidad"].ToString();
-
+            
             pictureBox1.Image = convierteBlobAImagen((byte[])misPokemons.Rows[0]["imagen"]);
         }
 
@@ -54,8 +54,8 @@ namespace Pokedex_C_Sharp
             misPokemons = miConexion.getPokemonsPorId(idActual);
             nombrePokemons.Text = "Nombre " + "\n" + "\n" + misPokemons.Rows[0]["nombre"].ToString();
             especiePokemon.Text = misPokemons.Rows[0]["especie"].ToString();
-            alturaPokemon.Text = "Altura" + "\n" + "\n" + misPokemons.Rows[0]["altura"].ToString();
-            pesoPokemon.Text = "Peso" + "\n" + "\n" + misPokemons.Rows[0]["peso"].ToString();
+            alturaPokemon.Text = "Altura" + "\n" + "\n" + misPokemons.Rows[0]["altura"].ToString() + " m";
+            pesoPokemon.Text = "Peso" + "\n" + "\n" + misPokemons.Rows[0]["peso"].ToString() + " kg";
             habilidadPokemon.Text = "Habitat" + "\n" + "\n" + misPokemons.Rows[0]["habilidad"].ToString();
 
             pictureBox1.Image = convierteBlobAImagen((byte[])misPokemons.Rows[0]["imagen"]);
@@ -107,17 +107,15 @@ namespace Pokedex_C_Sharp
         private void button2_Click(object sender, EventArgs e)
         {
             Evoluciones ventana2 = new Evoluciones();
+            ventana2.cambiaMovimientosPokemon(misPokemons.Rows[0]["movimiento1"].ToString());
+            ventana2.cambiaMovimientosPokemon1(misPokemons.Rows[0]["movimiento2"].ToString());
+            ventana2.cambiaHabitat(misPokemons.Rows[0]["habitat"].ToString());
             ventana2.Show();
         }
 
         private void especiePokemon_Click(object sender, EventArgs e)
         {
 
-
-            System.Drawing.Text.PrivateFontCollection privateFonts = new System.Drawing.Text.PrivateFontCollection();
-            privateFonts.AddFontFile("Fonts/Pokemon Hollow.ttf");
-            System.Drawing.Font font = new Font(privateFonts.Families[0], 12);
-            habilidadPokemon.Font = font;
         }
     }
 }

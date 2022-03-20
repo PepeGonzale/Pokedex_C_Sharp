@@ -17,7 +17,7 @@ namespace Pokedex_C_Sharp
             
             descripcionPokemons.Text = descripcion;
         }
-        
+       
         public Ventana01()
         {
             InitializeComponent();

@@ -34,12 +34,16 @@ namespace Pokedex_C_Sharp
             // 
             // descripcionPokemons
             // 
-            this.descripcionPokemons.BackColor = System.Drawing.Color.DarkRed;
+            this.descripcionPokemons.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.descripcionPokemons.BackColor = System.Drawing.Color.Transparent;
+            this.descripcionPokemons.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.descripcionPokemons.ForeColor = System.Drawing.Color.Yellow;
             this.descripcionPokemons.Location = new System.Drawing.Point(172, 64);
             this.descripcionPokemons.Name = "descripcionPokemons";
             this.descripcionPokemons.Size = new System.Drawing.Size(474, 303);
             this.descripcionPokemons.TabIndex = 0;
             this.descripcionPokemons.Text = "label1";
+            this.descripcionPokemons.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.descripcionPokemons.Click += new System.EventHandler(this.descripcionPokemons_Click);
             // 
             // Ventana01
