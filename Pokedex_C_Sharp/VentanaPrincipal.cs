@@ -117,5 +117,12 @@ namespace Pokedex_C_Sharp
         {
 
         }
+
+        private void EvolucionPokemon1_Click(object sender, EventArgs e)
+        {
+            Evolucion ventana = new Evolucion(id: idActual);
+            ventana.Show();
+
+        }
     }
 }

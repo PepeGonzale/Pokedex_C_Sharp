@@ -102,6 +102,12 @@
     <Compile Include="Evoluciones.Designer.cs">
       <DependentUpon>Evoluciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="Evolucion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Evolucion.Designer.cs">
+      <DependentUpon>Evolucion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventana01.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Bienvenida.resx">
       <DependentUpon>Bienvenida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Evolucion.resx">
+      <DependentUpon>Evolucion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Evoluciones.resx">
       <DependentUpon>Evoluciones.cs</DependentUpon>
