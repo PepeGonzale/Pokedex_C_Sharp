@@ -140,22 +140,24 @@ namespace Pokedex_C_Sharp
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(122, 316);
+            this.button1.BackColor = System.Drawing.Color.DarkGreen;
+            this.button1.Location = new System.Drawing.Point(121, 312);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 14);
+            this.button1.Size = new System.Drawing.Size(62, 20);
             this.button1.TabIndex = 10;
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // movimiento2Pokemon
             // 
-            this.movimiento2Pokemon.Location = new System.Drawing.Point(77, 316);
+            this.movimiento2Pokemon.BackColor = System.Drawing.Color.DarkRed;
+            this.movimiento2Pokemon.Location = new System.Drawing.Point(60, 312);
             this.movimiento2Pokemon.Margin = new System.Windows.Forms.Padding(2);
             this.movimiento2Pokemon.Name = "movimiento2Pokemon";
-            this.movimiento2Pokemon.Size = new System.Drawing.Size(40, 14);
+            this.movimiento2Pokemon.Size = new System.Drawing.Size(57, 20);
             this.movimiento2Pokemon.TabIndex = 11;
-            this.movimiento2Pokemon.UseVisualStyleBackColor = true;
+            this.movimiento2Pokemon.UseVisualStyleBackColor = false;
             this.movimiento2Pokemon.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox1
