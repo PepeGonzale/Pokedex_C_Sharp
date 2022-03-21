@@ -19,7 +19,13 @@ namespace Pokedex_C_Sharp
         public VentanaPrincipal()
         {
             InitializeComponent();
-           
+            misPokemons = miConexion.getPokemonsPorId(idActual);
+            nombrePokemons.Text = "Nombre " + "\n" + "\n" + misPokemons.Rows[0]["nombre"].ToString();
+            especiePokemon.Text = "Especie" + "\n" + "\n" + misPokemons.Rows[0]["especie"].ToString();
+            alturaPokemon.Text = "Altura" + "\n" + "\n" + misPokemons.Rows[0]["altura"].ToString();
+            pesoPokemon.Text = "Peso" + "\n" + "\n" + misPokemons.Rows[0]["peso"].ToString();
+            habilidadPokemon.Text = "Habitat" + "\n" + "\n" + misPokemons.Rows[0]["habilidad"].ToString();
+            pictureBox1.Image = convierteBlobAImagen((byte[])misPokemons.Rows[0]["imagen"]);
         }
         private Image convierteBlobAImagen(byte[] img)
         {
@@ -31,7 +37,7 @@ namespace Pokedex_C_Sharp
             idActual--;
             if(idActual <= 0)
             {
-                idActual = 1;
+                idActual = 151;
             }
             misPokemons = miConexion.getPokemonsPorId(idActual);
             nombrePokemons.Text = "Nombre " + "\n" + "\n" + misPokemons.Rows[0]["nombre"].ToString();
@@ -48,7 +54,7 @@ namespace Pokedex_C_Sharp
             idActual++;
             if (idActual >= 151)
             {
-                idActual = 151;
+                idActual = 1;
 
             }
             misPokemons = miConexion.getPokemonsPorId(idActual);
