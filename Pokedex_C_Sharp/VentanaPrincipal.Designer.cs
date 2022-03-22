@@ -38,7 +38,7 @@ namespace Pokedex_C_Sharp
             this.pesoPokemon = new System.Windows.Forms.Label();
             this.habilidadPokemon = new System.Windows.Forms.Label();
             this.especiePokemon = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.descripcion = new System.Windows.Forms.Button();
             this.movimiento2Pokemon = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.EvolucionPokemon1 = new System.Windows.Forms.Button();
@@ -47,30 +47,28 @@ namespace Pokedex_C_Sharp
             // 
             // left
             // 
+            this.left.BackColor = System.Drawing.Color.Transparent;
             this.left.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.left.Image = global::Pokedex_C_Sharp.Properties.Resources.pokedex1;
-            this.left.Location = new System.Drawing.Point(177, 336);
+            this.left.Location = new System.Drawing.Point(171, 336);
             this.left.Margin = new System.Windows.Forms.Padding(2);
             this.left.Name = "left";
             this.left.Size = new System.Drawing.Size(34, 30);
             this.left.TabIndex = 1;
-            this.left.Text = "<";
-            this.left.UseVisualStyleBackColor = true;
+            this.left.UseVisualStyleBackColor = false;
             this.left.Click += new System.EventHandler(this.button1_Click);
             // 
             // right
             // 
-            this.right.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.right.BackColor = System.Drawing.Color.Transparent;
             this.right.Cursor = System.Windows.Forms.Cursors.Default;
             this.right.DialogResult = System.Windows.Forms.DialogResult.Yes;
             this.right.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.right.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.right.ForeColor = System.Drawing.Color.Transparent;
             this.right.Location = new System.Drawing.Point(216, 336);
             this.right.Margin = new System.Windows.Forms.Padding(2);
             this.right.Name = "right";
             this.right.Size = new System.Drawing.Size(38, 30);
             this.right.TabIndex = 2;
-            this.right.Text = ">";
             this.right.UseVisualStyleBackColor = false;
             this.right.Click += new System.EventHandler(this.right_Click);
             // 
@@ -138,16 +136,16 @@ namespace Pokedex_C_Sharp
             this.especiePokemon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.especiePokemon.Click += new System.EventHandler(this.especiePokemon_Click);
             // 
-            // button1
+            // descripcion
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkGreen;
-            this.button1.Location = new System.Drawing.Point(121, 312);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(62, 20);
-            this.button1.TabIndex = 10;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.descripcion.BackColor = System.Drawing.Color.DarkGreen;
+            this.descripcion.Location = new System.Drawing.Point(121, 312);
+            this.descripcion.Margin = new System.Windows.Forms.Padding(2);
+            this.descripcion.Name = "descripcion";
+            this.descripcion.Size = new System.Drawing.Size(62, 20);
+            this.descripcion.TabIndex = 10;
+            this.descripcion.UseVisualStyleBackColor = false;
+            this.descripcion.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // movimiento2Pokemon
             // 
@@ -162,21 +160,22 @@ namespace Pokedex_C_Sharp
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(50, 123);
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Location = new System.Drawing.Point(44, 119);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(174, 131);
+            this.pictureBox1.Size = new System.Drawing.Size(187, 136);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // EvolucionPokemon1
             // 
+            this.EvolucionPokemon1.BackColor = System.Drawing.Color.Transparent;
             this.EvolucionPokemon1.Location = new System.Drawing.Point(60, 355);
             this.EvolucionPokemon1.Name = "EvolucionPokemon1";
             this.EvolucionPokemon1.Size = new System.Drawing.Size(96, 52);
             this.EvolucionPokemon1.TabIndex = 12;
-            this.EvolucionPokemon1.Text = "Evolucion";
-            this.EvolucionPokemon1.UseVisualStyleBackColor = true;
+            this.EvolucionPokemon1.UseVisualStyleBackColor = false;
             this.EvolucionPokemon1.Click += new System.EventHandler(this.EvolucionPokemon1_Click);
             // 
             // VentanaPrincipal
@@ -189,7 +188,7 @@ namespace Pokedex_C_Sharp
             this.ClientSize = new System.Drawing.Size(550, 432);
             this.Controls.Add(this.EvolucionPokemon1);
             this.Controls.Add(this.movimiento2Pokemon);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.descripcion);
             this.Controls.Add(this.especiePokemon);
             this.Controls.Add(this.habilidadPokemon);
             this.Controls.Add(this.pesoPokemon);
@@ -200,7 +199,7 @@ namespace Pokedex_C_Sharp
             this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "VentanaPrincipal";
-            this.Text = "Form1";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.VentanaPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -222,7 +221,7 @@ namespace Pokedex_C_Sharp
         private System.Windows.Forms.Label pesoPokemon;
         private System.Windows.Forms.Label habilidadPokemon;
         private System.Windows.Forms.Label especiePokemon;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button descripcion;
         private System.Windows.Forms.Button movimiento2Pokemon;
         private System.Windows.Forms.Button EvolucionPokemon1;
     }

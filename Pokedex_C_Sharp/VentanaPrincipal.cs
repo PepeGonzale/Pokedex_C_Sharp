@@ -19,13 +19,47 @@ namespace Pokedex_C_Sharp
         public VentanaPrincipal()
         {
             InitializeComponent();
+
+
             misPokemons = miConexion.getPokemonsPorId(idActual);
             nombrePokemons.Text = "Nombre " + "\n" + "\n" + misPokemons.Rows[0]["nombre"].ToString();
-            especiePokemon.Text = "Especie" + "\n" + "\n" + misPokemons.Rows[0]["especie"].ToString();
+            especiePokemon.Text =  misPokemons.Rows[0]["especie"].ToString();
             alturaPokemon.Text = "Altura" + "\n" + "\n" + misPokemons.Rows[0]["altura"].ToString();
             pesoPokemon.Text = "Peso" + "\n" + "\n" + misPokemons.Rows[0]["peso"].ToString();
             habilidadPokemon.Text = "Habitat" + "\n" + "\n" + misPokemons.Rows[0]["habilidad"].ToString();
             pictureBox1.Image = convierteBlobAImagen((byte[])misPokemons.Rows[0]["imagen"]);
+
+            left.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            left.FlatAppearance.BorderSize = 0;
+            left.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            left.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            left.BackColor = Color.Transparent;
+
+            right.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            right.FlatAppearance.BorderSize = 0;
+            right.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            right.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            right.BackColor = Color.Transparent;
+
+            EvolucionPokemon1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            EvolucionPokemon1.FlatAppearance.BorderSize = 0;
+            EvolucionPokemon1.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            EvolucionPokemon1.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            EvolucionPokemon1.BackColor = Color.Transparent;
+
+            descripcion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            descripcion.FlatAppearance.BorderSize = 0;
+            descripcion.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            descripcion.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            descripcion.BackColor = Color.Transparent;
+
+            movimiento2Pokemon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            movimiento2Pokemon.FlatAppearance.BorderSize = 0;
+            movimiento2Pokemon.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            movimiento2Pokemon.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            movimiento2Pokemon.BackColor = Color.Transparent;
+
+
         }
         private Image convierteBlobAImagen(byte[] img)
         {
@@ -41,7 +75,7 @@ namespace Pokedex_C_Sharp
             }
             misPokemons = miConexion.getPokemonsPorId(idActual);
             nombrePokemons.Text = "Nombre " + "\n" + "\n" + misPokemons.Rows[0]["nombre"].ToString();
-            especiePokemon.Text = "Especie" + "\n" + "\n" + misPokemons.Rows[0]["especie"].ToString();
+            especiePokemon.Text =  misPokemons.Rows[0]["especie"].ToString();
             alturaPokemon.Text = "Altura" + "\n" + "\n" + misPokemons.Rows[0]["altura"].ToString();
             pesoPokemon.Text = "Peso" + "\n" + "\n" + misPokemons.Rows[0]["peso"].ToString();
             habilidadPokemon.Text = "Habitat" + "\n" + "\n" + misPokemons.Rows[0]["habilidad"].ToString();
